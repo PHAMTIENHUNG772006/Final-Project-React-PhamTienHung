@@ -1,0 +1,448 @@
+/* Css modal thêm thành viên */
+#modalAddEployee {
+  position: absolute;
+  width: 480px;
+  height: 415px;
+  border-radius: 8px;
+}
+.close {
+  width: 28px;
+  height: 28px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.headerAdd {
+  width: fit-content;
+  height: 50px;
+  font-weight: 500;
+  font-size: 23.3px;
+  line-height: 30px;
+  padding: 12px 0;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* css modal thêm task */
+#modalAddContainer {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.add-container {
+  position: relative;
+  bottom: 20%;
+}
+.body-modalAdd {
+  width: 432px;
+  height: auto;
+  margin: 9px;
+  padding: 24px 15px;
+}
+.add-container {
+  width: 480px;
+  background-color: #ffff;
+  border-radius: 15px;
+}
+.header-modal {
+  padding: 15px 16px;
+  height: 63px;
+}
+.selectRole {
+  width: 432px;
+  height: 45px;
+  border: 1px solid #dddee0;
+  padding-bottom: 10px;
+}
+#emailEmployee {
+  width: 432px;
+  height: 44px;
+  border-radius: 8px;
+  gap: 8px;
+  border-width: 1px;
+  padding-top: 10px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  border: 1px solid #dddee0;
+}
+.btnSave {
+  width: 58px;
+  height: 37px;
+  background-color: #0d6efd;
+  color: #ffff;
+  border: 1px solid #0d6efd;
+  border-radius: 8px;
+  border-width: 1px;
+}
+.btnCancel {
+  width: 58px;
+  height: 37px;
+  border-radius: 8px;
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+  text-align: center;
+  color: #ffff;
+  border-width: 1px;
+}
+label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #344054;
+}
+#footer-modalAdd {
+  padding: 8px 24px;
+}
+.header-modal {
+  width: 100%;
+  font-weight: 500;
+  font-size: 23.3px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#closeAddProject {
+  width: 28px;
+  height: 28px;
+}
+.modal-footer {
+  border-radius: 15px;
+}
+.modal-addTask {
+  position: relative;
+  margin-top: 5px;
+  bottom: 50px;
+  height: 750px;
+  width: 450px;
+  background-color: #ffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.modal {
+  position: absolute;
+  margin-top: 5px;
+  left: 40%;
+  width: 400px;
+  background-color: #ffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.delete {
+  position: relative;
+  left: 5px;
+  position: absolute;
+  margin-top: 5px;
+  left: 30%;
+  width: 400px;
+  background-color: #ffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.bodyForm {
+  background-color: #fff;
+  border-radius: 15px !important;
+  padding: 12px 22px;
+}
+
+.bodyFormTask {
+  background-color: #fff;
+  border-radius: 15px !important;
+  padding: 12px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mainAdd {
+  background-color: #ffff;
+  border-radius: 15px;
+}
+.footerAdd {
+  display: flex;
+  gap: 23px;
+  justify-content: flex-end;
+}
+button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  gap: 16px;
+}
+.cancel {
+  width: 58px;
+  height: 37px;
+  left: 11px;
+  border-radius: 8px;
+  border-width: 1px;
+  background: #ccc;
+}
+.save {
+  width: 58px;
+  height: 37px;
+  left: 11px;
+  border-radius: 8px;
+  border-width: 1px;
+  background: #007bff;
+  color: white;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  display: block;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.headerList {
+  display: flex;
+  align-items: center;
+}
+.nameList {
+  width: auto;
+  height: 20px;
+  font-weight: 800;
+  font-size: 15.47px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+
+#modalRenderEployee {
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-width: 1px;
+  position: relative;
+  right: 200px;
+  bottom: 200px;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+.containerShowEmployee {
+  display: flex;
+  justify-content: space-between;
+}
+.header-modal {
+  padding: 16px 21px;
+}
+.selectRoleAgain{
+  width: 200px;
+}
+.modalrender {
+  width: 598px;
+  border-radius: 7px;
+  background-color: #ffff;
+  position: relative;
+  left: 30%;
+  top: 39px;
+}
+.listEmployee {
+  display: flex;
+  gap: 16px;
+}
+th{
+  font-weight: 600;
+}
+.contentHeader {
+  width: fit-content;
+  height: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.close{
+  position: relative;
+  bottom: 8px;
+}
+.headerrender {
+  width: 99px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0px;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+#footer-modalrenderEmployee {
+  background-color: #ffff;
+  padding: 16px 21px;
+  border-radius: 7px;
+   display: flex;
+   gap: 12px;
+   justify-content: flex-end;
+}
+.iconTrash {
+  width: 40px;
+  height: 40px;
+  top: 3.5px;
+  left: 178px;
+}
+.inputRole {
+  width: 148px;
+  height: 26px;
+  left: 14px;
+  border-width: 1px;
+  border-radius: 3px;
+  border: 1px solid #d0d5dd;
+}
+#bodyModalEmployee {
+  height: auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #ffff;
+  padding: 16px 20px;
+}
+#listEmployeeRigth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.headerrender {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #212529;
+}
+.btnCloseModalEmploye {
+  width: 64px;
+  height: 38px;
+  border-width: 1px;
+  border-radius: 6px;
+  color: #ffff;
+  background-color: #6c757d;
+}
+.btnSaveModalEmploye {
+  width: 54px;
+  height: 38px;
+  border-width: 1px;
+  border-radius: 6px;
+  background-color: #0d6efd;
+  color: #ffff;
+  border: none;
+}
+.nameMembers {
+  width: auto;
+  height: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19.2px;
+  letter-spacing: 0px;
+  color: #212529;
+}
+.emailMembers {
+  width: 187px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 0px;
+}
+.roleMembers {
+  width: 187px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  color: #c1c1c3;
+}
+.listEmployeeRight{
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filterSearch{
+  width: 400px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.header-container-MyTask{
+  width: 100%;
+    display: flex;
+  justify-content: flex-end;
+}
+
+.bodyTask tr td{
+  padding: 12px;
+  border: 1px solid rgb(199, 195, 195);
+}
+
+.date{
+  color: #007bff;
+}
+.body-my-task{
+  max-width: 1300px;
+  max-height: 500px;
+}
+
+.body-my-task table thead tr th {
+  background-color: #e5e7e9;
+  border: 1px solid rgb(221, 218, 218);
+}
+.btnConfirm{
+  width: fit-content;
+}
+
+.addTask{
+  position: relative;
+  bottom: 12px;
+}
