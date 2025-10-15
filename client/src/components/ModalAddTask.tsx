@@ -57,7 +57,6 @@ export default function ModalAddTask({
   const users = useSelector((state: RootState) => state.users.users);
   const projects = useSelector((state: RootState) => state.projects.projects);
   const { id } = useParams<{ id: string }>();
-
   const foundProject = projects.find((p) => p.id === id);
 
   const members = foundProject?.members;
@@ -67,37 +66,42 @@ export default function ModalAddTask({
   }, [dispatch]);
 
   // Nếu đang sửa thì set form bằng dữ liệu ban đầu
-  useEffect(() => {
-    if (open) {
-      if (modle === "add") {
-        setForm({
-          id: "",
-          taskName: "",
-          assigneeId: "",
-          projectId: id || "",
-          asigndate: "",
-          dueDate: "",
-          priority: "Thấp",
-          progress: "",
-          status: "To do",
-        });
-        setError({
-          taskName: "",
-          assigneeId: "",
-          projectId: "",
-          asigndate: "",
-          dueDate: "",
-          priority: "",
-          progress: "",
-          status: "",
-        });
-      } else if (initial) {
-        setForm((prev) => ({ ...prev, ...initial }));
-      }
-    }
-  }, [open]);
+useEffect(() => {
 
-  if (!members) return;
+  // reset form tùy theo chế độ
+  if (modle === "add") {
+    setForm({
+      id: "",
+      taskName: "",
+      assigneeId: "",
+      projectId: id || "",
+      asigndate: "",
+      dueDate: "",
+      priority: "Thấp",
+      progress: "",
+      status: "To do",
+    });
+  } else if (initial && Object.keys(initial).length > 0) {
+    // chỉ setForm nếu initial có dữ liệu thật sự
+    setForm((prev) => ({ ...prev, ...initial }));
+  }
+
+  // reset lỗi mỗi khi mở modal
+  setError({
+    taskName: "",
+    assigneeId: "",
+    projectId: "",
+    asigndate: "",
+    dueDate: "",
+    priority: "",
+    progress: "",
+    status: "",
+  });
+}, [open, modle, id, JSON.stringify(initial)]);
+
+
+  if (!members) return null;
+    if (!open) return; // chỉ chạy khi modal mở
 
   const handleChange = (
     e:
@@ -133,11 +137,13 @@ export default function ModalAddTask({
     form.id = Date.now().toString();
   }
 
-  const findTask = tasks.find(
-    (task) =>
-      task.taskName === form.taskName &&
-      (modle === "add" || task.id !== form.id) 
-  );
+const findTask = tasks.find(
+  (task) =>
+    task.taskName.trim().toLowerCase() === form.taskName.trim().toLowerCase() && 
+    task.assigneeId === form.assigneeId && 
+    (modle === "add" || task.id !== form.id) 
+);
+
 
   if (!form.taskName.trim()) {
     newError.taskName = "Tên nhiệm vụ không được để trống";
@@ -236,8 +242,6 @@ if (form.asigndate && form.dueDate) {
     });
     onCancel();
   };
-
-  if (!open) return null;
 
   return (
     <div className="overlay">

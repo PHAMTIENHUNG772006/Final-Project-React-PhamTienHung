@@ -10,14 +10,12 @@ interface EmpProps {
   onCancel: () => void;
   onDelete: (project: Project, employee: ProjectMember) => void;
   onUpdate: (project: Project, employee: ProjectMember) => void;
-  onReload: () => void;
 }
 
 export default function ModalListEmp({
   open,
   onCancel,
   onDelete,
-  onReload,
   onUpdate
 }: EmpProps) {
   const users = useSelector((state: RootState) => state.users.users);
@@ -69,7 +67,6 @@ export default function ModalListEmp({
     removedMembers.forEach((mem) => {
       onDelete(foundProject, mem);
     });
-    onReload();
   };
 
   const handleUpdateRole = (
@@ -78,7 +75,7 @@ export default function ModalListEmp({
   ) => {
     const newRole = e.target.value;
 
-    if(newRole === "Project Owner"){
+    if(newRole === "Project Owner"){ // nếu user là Project Ower thì không cho xóa
        Swal.fire({
             icon: "warning",
             title: " Dự án đã có Project Owner",

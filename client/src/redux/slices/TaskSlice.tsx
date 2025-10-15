@@ -32,6 +32,27 @@ export const deleteTask = createAsyncThunk(
   }
 );
 
+export const deleteTaskByProject = createAsyncThunk(
+  "tasks/deleteTaskByProject",
+  async (projectId: string) => {
+ 
+    const res = await axios.get("http://localhost:8080/tasks");
+    const allTasks: Task[] = res.data;
+
+
+    const tasksToDelete = allTasks.filter(task => task.projectId === projectId);
+
+
+    await Promise.all(
+      tasksToDelete.map(task => axios.delete(`http://localhost:8080/tasks/${task.id}`))
+    );
+
+
+    return projectId;
+  }
+);
+
+
 export const updateTask = createAsyncThunk(
   "tasks/updateTask",
   async (task: Task) => {
@@ -82,10 +103,23 @@ const TaskSlice = createSlice({
       .addCase(deleteTask.fulfilled, (state, action) => {
         state.status = "fulfilled";
         state.tasks = state.tasks.filter(
-          (task) => String(task.id) !== action.payload
+          (task) => task.id !== action.payload
         );
       })
       .addCase(deleteTask.rejected, (state) => {
+        state.status = "rejected";
+        state.error = "Lỗi nhé";
+      })
+      .addCase(deleteTaskByProject.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(deleteTaskByProject.fulfilled, (state, action) => {
+        state.status = "fulfilled";
+        state.tasks = state.tasks.filter(
+          (task) => task.projectId !== action.payload
+        );
+      })
+      .addCase(deleteTaskByProject.rejected, (state) => {
         state.status = "rejected";
         state.error = "Lỗi nhé";
       })

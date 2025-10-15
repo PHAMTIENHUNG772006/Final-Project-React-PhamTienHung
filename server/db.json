@@ -1,223 +1,153 @@
 {
   "users": [
     {
-      "id": "1",
-      "fullname": "An Nguyễn",
-      "email": "hung@gmail.com",
-      "password": "Hung123456"
-    },
-    {
-      "id": "1759684819126",
-      "fullname": "Huệ",
-      "email": "hue2007@gmail.com",
-      "password": "Hue123456"
-    },
-    {
-      "id": "1759812182801",
-      "fullname": "Hưng",
-      "email": "hue200677@gmail.com",
-      "password": "qưertyui"
-    },
-    {
-      "id": "1759886971622",
+      "id": "1760430820963",
       "fullname": "Phạm Tiến Hưng",
-      "email": "hung123@gmail.com",
-      "password": "Hung123123@"
+      "email": "hung@gmail.com",
+      "password": "hung12345"
+    },
+    {
+      "id": "1760430857044",
+      "fullname": "Bùi Đức Lợi",
+      "email": "loi@gmail.com",
+      "password": "loi12345"
+    },
+    {
+      "id": "1760430898527",
+      "fullname": "Hoàng Minh Quang",
+      "email": "quang@gmail.com",
+      "password": "quang12345"
     }
   ],
   "tasks": [
     {
-      "id": "1",
-      "taskName": "lập trình web",
-      "assigneeId": "1759684819126",
-      "projectId": "1759508331004",
-      "asigndate": "2025-10-13",
-      "dueDate": "2025-11-12",
-      "priority": "Thấp",
-      "progress": "Đúng tiến độ",
-      "status": "To do",
-      "asignDate": "2025-03-24"
-    },
-    {
-      "id": "1759973369600",
-      "taskName": "Soạn thảo đề cương dự án web",
-      "assigneeId": "1759684819126",
-      "projectId": "1759508331004",
-      "asigndate": "2025-10-22",
-      "dueDate": "2025-10-23",
-      "priority": "Thấp",
-      "progress": "Trễ hạn",
-      "status": "In Progress",
-      "asignDate": "2025-03-24"
-    },
-    {
-      "id": "1759977352817",
-      "taskName": "Soạn thảo đề cương dự án",
-      "assigneeId": "1759886971622",
-      "projectId": "1759508331004",
+      "id": "1760433571330",
+      "taskName": "training nhân viên về quy tắc ứng sử",
+      "assigneeId": "1760430898527",
+      "projectId": "1760432064304",
       "asigndate": "2025-10-15",
-      "dueDate": "2025-10-24",
-      "priority": "Trung bình",
-      "progress": "Đúng tiến độ",
-      "status": "Pending",
-      "asignDate": "2025-03-24"
+      "dueDate": "2025-10-16",
+      "priority": "Thấp",
+      "progress": "Có rủi ro",
+      "status": "To do"
     },
     {
-      "id": "1759977366897",
-      "taskName": "Soạn thảo đề cương dự án 1",
-      "assigneeId": "1759886971622",
-      "projectId": "1759508331004",
-      "asigndate": "2025-09-28",
-      "dueDate": "2025-10-24",
-      "priority": "Thấp",
-      "progress": "Đúng tiến độ",
+      "id": "1760433972310",
+      "taskName": "kiểm thử lỗi của các intern",
+      "assigneeId": "1760430857044",
+      "projectId": "1760432064304",
+      "asigndate": "2025-10-16",
+      "dueDate": "2025-10-17",
+      "priority": "Trung bình",
+      "progress": "Trễ hạn",
       "status": "In Progress"
+    },
+    {
+      "id": "1760458631846",
+      "taskName": "kiểm thử lỗi day1",
+      "assigneeId": "1760430820963",
+      "projectId": "1760432064304",
+      "asigndate": "2025-10-16",
+      "dueDate": "2025-10-18",
+      "priority": "Cao",
+      "progress": "Đúng tiến độ",
+      "status": "To do"
+    },
+    {
+      "id": "1760459524077",
+      "taskName": "kiểm thử lỗi day",
+      "assigneeId": "1760430820963",
+      "projectId": "1760433801911",
+      "asigndate": "2025-10-16",
+      "dueDate": "2025-10-25",
+      "priority": "Trung bình",
+      "progress": "Trễ hạn",
+      "status": "To do"
     }
   ],
   "projects": [
     {
-      "id": "1759508331004",
-      "projectName": "Quản lý nhân sự Rikkei",
-      "idOwner": "1",
-      "description": "Hệ thống quản lý nhân viên cho công ty",
-      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1759716903/ke3qlfobtqr6atbxoi74.jpg",
+      "id": "1760432064304",
+      "projectName": "Quản lý nhân sự công ty Rikkei",
+      "idOwner": "1760430820963",
+      "description": "Quản lý intern cho lập trình với react",
+      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760432064/rst4ouhfv3zap6e9ycp3.webp",
       "members": [
         {
-          "userId": "1",
+          "userId": "1760430820963",
           "role": "Project Owner"
         },
         {
-          "userId": "1759886971622",
-          "role": "Manager"
-        },
-        {
-          "userId": "1759812182801",
-          "role": "Tester "
-        }
-      ]
-    },
-    {
-      "id": "1759684819126",
-      "projectName": "Phần mềm quản lý tài chính",
-      "idOwner": "2",
-      "description": "Ứng dụng theo dõi chi tiêu cá nhân và doanh nghiệp nhỏ.",
-      "image": "https://res.cloudinary.com/demo/image/upload/finance.jpg",
-      "members": []
-    },
-    {
-      "id": "1759508331007",
-      "projectName": "Quản lý bệnh viện",
-      "idOwner": "3",
-      "description": "Dự án quản lý bệnh án và lịch hẹn của bệnh viện.",
-      "image": "https://res.cloudinary.com/demo/image/upload/hospital.jpg",
-      "members": []
-    },
-    {
-      "id": "1759508331008",
-      "projectName": "Ứng dụng du lịch",
-      "idOwner": "1",
-      "description": "Ứng dụng gợi ý địa điểm và khách sạn du lịch.",
-      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760030198/u4e12s3lurhbod6p7out.webp",
-      "members": []
-    },
-    {
-      "id": "1759508331009",
-      "projectName": "Quản lý thư viện",
-      "idOwner": "2",
-      "description": "Phần mềm quản lý mượn trả sách trong thư viện.",
-      "image": "https://res.cloudinary.com/demo/image/upload/library.jpg",
-      "members": []
-    },
-    {
-      "id": "1759508331010",
-      "projectName": "Ứng dụng luyện thi TOEIC",
-      "idOwner": "1",
-      "description": "App luyện thi TOEIC với đề cập nhật theo năm 2025.",
-      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1759716886/klowaghxmepqjrp6kaje.jpg",
-      "members": []
-    },
-    {
-      "id": "1759508331011",
-      "projectName": "Quản lý nhà hàng",
-      "idOwner": "2",
-      "description": "Hệ thống quản lý bàn ăn, order và doanh thu.",
-      "image": "https://res.cloudinary.com/demo/image/upload/restaurant.jpg",
-      "members": []
-    },
-    {
-      "id": "1759508331012",
-      "projectName": "App đặt vé xem phim",
-      "idOwner": "3",
-      "description": "Ứng dụng đặt vé và xem lịch chiếu phim.",
-      "image": "https://res.cloudinary.com/demo/image/upload/cinema.jpg",
-      "members": []
-    },
-    {
-      "id": "1759508331013",
-      "projectName": "Quản lý bất động sản",
-      "idOwner": "1",
-      "description": "Website đăng tin mua bán nhà đất.",
-      "image": "https://res.cloudinary.com/demo/image/upload/realestate.jpg",
-      "members": []
-    },
-    {
-      "id": "1759508331014",
-      "projectName": "Ứng dụng học tiếng Anh",
-      "idOwner": "2",
-      "description": "App học từ vựng, ngữ pháp và luyện nói tiếng Anh.",
-      "image": "https://res.cloudinary.com/demo/image/upload/english.jpg",
-      "members": []
-    },
-    {
-      "id": "1759684941246",
-      "projectName": "Lập trình Mạng",
-      "idOwner": "1759684819126",
-      "description": "quá hay",
-      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1759684955/rksn2971ei5pkr0w1z7u.jpg",
-      "members": []
-    },
-    {
-      "id": "1759974505584",
-      "projectName": "Lập trình ứng dụng",
-      "idOwner": "1",
-      "description": "Lập trình App",
-      "image": "",
-      "members": []
-    },
-    {
-      "id": "1759974552801",
-      "projectName": "Lập trình AI",
-      "idOwner": "1759812182801",
-      "description": "Lập trình Ai với python",
-      "image": "",
-      "members": []
-    },
-    {
-      "id": "1760061689379",
-      "projectName": "Quản lí sinh viên Rikkei",
-      "idOwner": "1",
-      "description": "Quản lí danh sách sinh viên trong chương trình hợp tác giữa Rikkei academy và Ptit",
-      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760061687/nxzawleg1ucx6pjacq1y.png",
-      "members": [
-        {
-          "userId": "1",
-          "role": "Project Owner"
-        },
-        {
-          "userId": "1759812182801",
+          "userId": "1760430898527",
           "role": "Developer"
+        },
+        {
+          "userId": "1760430857044",
+          "role": "Tester"
         }
       ]
     },
     {
-      "id": "1760319852234",
-      "projectName": "Lập trinh AI với công nghệ Java",
-      "idOwner": "1759886971622",
-      "description": "lập trình với IDE JAVA",
-      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760319850/v9qbvr1d5kkbxhhcfluo.png",
+      "id": "1760433801911",
+      "projectName": "Quản lí dự án thực tập sinh back-end",
+      "idOwner": "1760430820963",
+      "description": "quản lí nhiệm vụ và danh sách nhân viên cho vị trí back-end developer",
+      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760433801/vfx4olpr6x4j1ync57sj.webp",
       "members": [
         {
-          "userId": "1759886971622",
+          "userId": "1760430820963",
+          "role": "Project Owner"
+        }
+      ]
+    },
+    {
+      "id": "1760433904107",
+      "projectName": "Quản lý sản phẩm ăn vặt bà Tuyết",
+      "idOwner": "1760430820963",
+      "description": "Bà tuyết diamon mà một trong các thương hiệu lớn về đồ ăn vặt trên thị trường Việt Nam",
+      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760433903/jnpw0didlyytbojjpliv.webp",
+      "members": [
+        {
+          "userId": "1760430820963",
+          "role": "Project Owner"
+        }
+      ]
+    },
+    {
+      "id": "1760434246099",
+      "projectName": "Quản lý nhân viên trong quán nhậu Tự Do",
+      "idOwner": "1760430820963",
+      "description": "quán nhậu tự do là một trong những chuỗi quán nhậu có tiếng tại Hà Nội với kênh tiktok 4 triệu người đang kí",
+      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760434245/uq1eji3rjgyzma0qystm.webp",
+      "members": [
+        {
+          "userId": "1760430820963",
+          "role": "Project Owner"
+        }
+      ]
+    },
+    {
+      "id": "1760459806440",
+      "projectName": "Lập trinh mô phỏng ngoài không gian",
+      "idOwner": "1760430820963",
+      "description": "lập trinh mô phỏng các hành tinh ở ngoài vũ trụ bao la rông lớn",
+      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760459805/ou2tkj0arud2idao1jo8.webp",
+      "members": [
+        {
+          "userId": "1760430820963",
+          "role": "Project Owner"
+        }
+      ]
+    },
+    {
+      "id": "1760459884626",
+      "projectName": "Lập trình cho trung tâm Ielts Alibaba",
+      "idOwner": "1760430820963",
+      "description": "quản lí và điều hành trung tâm tiếng anh tệ nhất cái hà nội trở nên tốt hơn",
+      "image": "https://res.cloudinary.com/deyuvrsv9/image/upload/v1760459883/oushwldmhb6lzsqeypyy.webp",
+      "members": [
+        {
+          "userId": "1760430820963",
           "role": "Project Owner"
         }
       ]

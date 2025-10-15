@@ -31,11 +31,11 @@ export default function ProjectsList({
     showModalEdit(project);
   };
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const [currentPage, setCurrentPage] = useState(1);// khởi tạo giá trị của curren
+  const itemsPerPage = 5;// số lượng phần tử có trong trang
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage; // tính giá trị bắt đầu theo số lượng item để render
+  const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage); // tách các phần tử theo giá trị bắt đầu cùng với số lượng 
 
   return (
     <div className="table-container">

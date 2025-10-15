@@ -25,7 +25,7 @@ export default function ProjectAddEmploye({
   const projects = useSelector((state: RootState) => state.projects.projects);
 
 
-  const findProject = projects.find((p) => p.id === String(id));
+  const findProject = projects.find((p) => p.id === String(id));// tìm project  để render ra hai ng đầu tiên 
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function ProjectAddEmploye({
   const members = findProject.members ?? [];
 
 
-  const visibleMembers = members.slice(0, 2);
+  const visibleMembers = members.slice(0, 2);// sử dụng slice lấy ra hai nhân viên đầu tiên trong dự án
 
 const handleSort = (e: React.ChangeEvent<HTMLSelectElement>) => {
   onSort(e.target.value);

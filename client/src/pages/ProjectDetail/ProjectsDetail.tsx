@@ -136,7 +136,7 @@ export default function ProjectDetail() {
     .filter((task) =>
       task.taskName.toLowerCase().includes(word.toLowerCase().trim())
     )
-    .sort((a, b) => {
+    .sort((a, b) => {// logic sắp xếp dự án trả về theo date hoặc tiến độ
       if (sortValue === "deadline") {
         return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
       }
@@ -192,7 +192,6 @@ export default function ProjectDetail() {
         open={isModalOpenEmpList}
         onDelete={handleModalDeleteEmp}
         onUpdate={handleModalUpdateEmp}
-        onReload={() => dispatch(featchProjects())}
       />
       
     </>

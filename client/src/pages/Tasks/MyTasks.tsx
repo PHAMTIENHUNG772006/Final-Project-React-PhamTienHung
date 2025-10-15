@@ -96,7 +96,7 @@ export default function MyTasks() {
 
   return (
     <div className="body">
-      <h2>Quản lí nhiệm vụ</h2>
+      <h2>Quản lý nhiệm vụ</h2>
 
       <div className="header-container-MyTask">
         <div className="filterSearch">

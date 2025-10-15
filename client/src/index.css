@@ -768,6 +768,7 @@ th {
   opacity: 1;
   left: 48px;
 }
+
 #nameEmployee {
   font-weight: 600;
   font-size: 18px;
@@ -798,7 +799,7 @@ span {
   padding-bottom: 10px;
 }
 .box-name {
-  width: 150px;
+  width: 170px;
   height: 48px;
   display: flex;
   flex-direction: column;
@@ -1053,7 +1054,7 @@ span {
 }
 
 .btn-edit:hover {
-  background-color: #e0a800;
+  background-color: #d4a003;
 }
 
 .btn-delete {
@@ -1194,7 +1195,7 @@ span {
 }
 
 .save-btn:hover {
-  background-color: #4096ff;
+  background-color: #3a92fd;
 }
 
 /* ==== Divider ==== */

@@ -62,11 +62,14 @@ export default function ModalAddProject({
       hasError = true;
     }
 
+    const projectId = Date.now().toString();
+
     // Kiểm tra trùng tên (trừ chính nó khi edit)
     const foundProject = projects.find(
       (p) =>
         p.projectName.toLowerCase() === nameProject.toLowerCase() &&
-        p.id !== initial?.id
+        p.id !== initial?.id &&
+        p.id === projectId
     );
     if (foundProject) {
       newError.name = "Tên dự án đã tồn tại";
@@ -113,7 +116,7 @@ export default function ModalAddProject({
 
     // === Tạo dữ liệu mới ===
     const newProject: Project = {
-      id: initial?.id ?? Date.now().toString(),
+      id: initial?.id ?? projectId,
       projectName: nameProject.trim(),
       idOwner: userLogin.id, 
       description: description.trim(),

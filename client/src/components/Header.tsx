@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -28,7 +28,7 @@ export default function Header() {
         icon: "success",
         title: "Đăng xuất tài khoản thành công!",
         showConfirmButton: false,
-        timer: 2000,
+        timer: 1500,
         html: "<div style='height:100px;'></div>",
       });
     setTimeout(() => {

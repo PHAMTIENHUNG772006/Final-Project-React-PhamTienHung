@@ -30,7 +30,6 @@ export default function Register() {
     navigate("/login");
   };
 
-  console.log(users);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

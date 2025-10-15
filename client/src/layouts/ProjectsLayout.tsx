@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProject, deleteProject, updateProject } from "../redux/slices/ProjectSlice";
 import type { AppDispatch, RootState } from "../redux/stores";
 import { Spin } from "antd";
+import { deleteTaskByProject } from "../redux/slices/TaskSlice";
 
 export default function ProjectManager() {
   const dispatch = useDispatch<AppDispatch>();
@@ -62,6 +63,7 @@ export default function ProjectManager() {
   const handleDeleteOk = () => {
     if (projectToDelete) {
       dispatch(deleteProject(projectToDelete.id));
+      dispatch(deleteTaskByProject(projectToDelete.id));
       setIsDeleteModalOpen(false);
       setProjectToDelete(null);
     }
